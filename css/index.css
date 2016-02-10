@@ -17,16 +17,23 @@ body{
 }
 header{
 	height: 60px;
-	background-color: #e67e22;
+	background-color: rgba(229, 103, 23, 0.8);
+	opacity: 1;
+	box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;
 }
 #header_text{
 	font-size: 36px;
 }
 nav	{
-	background-color: white;
-	color: #e67e22;
-	box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;
+	/*background: #e67e22;*/
+	background: none;
+	/*color: #e67e22;*/
+	/*box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;*/
 	margin: 0;
+	color: white;
+}
+nav a{
+	color: white;
 }
 
 /*#search-container-wrap img{
@@ -41,14 +48,13 @@ nav	{
 #search-container{
 	background-color: rgba(255,255,255,0.5);
 	box-shadow: rgba(0,0,0,0.1) 1px 10px 10px 1px;
-	
+	margin-top: 100px;
 }
 
-video{
-	margin: 15px 0 15px 0;
-	padding: 0;
+#top_hotel{
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
-
 #search-box{
 	padding: 20px 0 0 0;
 }
@@ -60,12 +66,14 @@ video{
 }
 
 #search-by-region{
-	background-color: #e67e22;
+	/*background-color: #e67e22;*/
+	background-color: rgba(44, 62, 80,0.5);
 	color: white;
 	min-height: 45px;
 	text-align: center;
 	padding: 13px 0 0 0;
 	font-weight: bold;
+
 }
 
 #search-container #search-by-region a{
@@ -81,8 +89,8 @@ video{
 	color: white;
 }
 #slide-header{
-	/*background-color: rgba(44, 62, 80,1.0);*/
-	background: #f7f7f7;
+	background-color: rgba(44, 62, 80,0.2);
+	/*background: #f7f7f7;*/
 	color: #112e5e;
 	text-align: center;
 	padding: 0 0 10px 0;
@@ -91,7 +99,7 @@ video{
 }
 #slide{
 	background-color: white;
-	border-bottom: 2px solid #112e5e;
+	/*border-bottom: 2px solid #112e5e;*/
 	padding-bottom: 40px;
 }
 
@@ -112,8 +120,9 @@ div.body-parts{
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background-color: rgba(230, 126, 34,0.8);
-	color: white;
+	/*background-color: rgba(230, 126, 34,0.8);*/
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #333;
 }
 
 #body-info-holder{
@@ -141,9 +150,10 @@ div.body-parts{
 }
 #text_region{
 	/*background-color: rgba(44, 62, 80,1.0);*/
-	background-color: #f7f7f7;
+	background-color: rgba(44, 62, 80,0.2);
 	color: #112e5e;
 	text-align: center;
+	padding-top: 0px;
 }
 /*******************/
 

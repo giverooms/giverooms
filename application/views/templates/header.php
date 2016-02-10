@@ -6,8 +6,8 @@
       <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+      <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+      <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/index.css">
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.flexisel.js"></script>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/slide_item.css">
@@ -47,14 +47,13 @@
 <div class="container-fluid">
 <!--************* Head **********************-->
   <header class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
       <img src="<?php echo base_url(); ?>images/giverooms.jpg" width="150px" height="60px">
     </div>
-  </header>
 
 <!--************* NAV **********************-->
-  <div class="row">
-    <nav class="navbar navbar-default" style="border-radius:0px;">
+    <div class="col-md-10">
+      <nav class="navbar" style="border-radius:0px;" id="nav">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -79,3 +78,4 @@
           </div><!--/.container-fluid -->
        </nav>
     </div>
+  </header>

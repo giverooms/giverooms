@@ -5,9 +5,7 @@
         <div id="search-container" class="col-xs-12 col-sm-10 col-md-10 col-lg-10" >
             <div class="row">
                 <div id="video-holder" class="col-sm-6">
-                    <video autoplay loop muted poster="screenshot.jpg"  class="col-sm-12">
-                        <source src="video/myanmar_travel.mp4" type="video/mp4">
-                    </video>
+                    
                 </div>
 
                 <div id="search-box" class="col-xs-12 col-sm-6">
@@ -81,7 +79,7 @@
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="top_hotel">
                 <ul id="flexiselDemo3">
                     <li>
-                        <img src="images/2.jpg" class="img-responsive center-block">
+                        <img src="upload/hotel/my-test-hotel-name-1/view/201602050001.jpg" class="img-responsive center-block">
                             <p>
                                 <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
                                 Inya Lake<br/>
@@ -89,7 +87,7 @@
                             </p>
                     </li>
                     <li>
-                        <img src="images/1.jpg" class="img-responsive center-block">
+                        <img src="upload/hotel/my-test-hotel-name-2/view/201602050002.jpg" class="img-responsive center-block">
                             <p>
                                 <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
                                 Inya Lake<br/>
@@ -97,7 +95,7 @@
                             </p>
                     </li>
                     <li>
-                            <img src="images/2.jpg" class="img-responsive center-block">
+                            <img src="upload/hotel/mandalay-test-hotel/view/201602050003.jpg" class="img-responsive center-block">
                             <p>
                                 <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
                                 Inya Lake<br/>
@@ -105,7 +103,7 @@
                             </p>
                     </li>
                     <li>
-                        <img src="images/1.jpg" class="img-responsive center-block">
+                        <img src="upload/hotel/mandalay-test-hotel-2/view/201602050004.jpg" class="img-responsive center-block">
                             <p>
                                 <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
                                 Inya Lake<br/>
@@ -125,7 +123,7 @@
         </div>
     </div>
     <div class="row body-parts">
-    	<div class="container">
+    	<div class="container" style="border:1px solid #f7f7f7;">
         <?php 
             $x="";
             foreach($regions as $region):
@@ -206,6 +204,9 @@
             </div>
         </div>
         <?php endforeach; ?>
+        <div class="col-md-12" style="padding:0px;">
+            <button class="btn btn-small btn-info pull-right">see more</button>
+        </div>
         </div>
     </div>
 
@@ -236,3 +237,8 @@
         </div>
         <div class="col-sm-2"></div>
     </div>
+    <script type="text/javascript">
+    $document.ready(function(){
+        window.alert('kyawminhtwe');
+    });
+    </script>
