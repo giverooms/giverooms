@@ -14,6 +14,37 @@
 		  	return $query->result();
 
 		}
+
+		function getCityId($ct_name){
+			$this->db->select("ct_id");
+			$this->db->from("city");
+			$this->db->where("ct_name_en",$ct_name);
+
+			$query_id = $this->db->get();
+
+			foreach($query_id->result_array() as $row){
+
+				$data = $row['ct_id'];
+
+			}
+
+			$data = 1;
+
+			return $data;
+		}
+
+		function getHotel($ct_name){
+
+			$ct_id = $this->getCityId('$ct_name');
+
+			$this->db->select("*");
+			$this->db->from("hotel");
+			$this->db->where("hotel_ct_id",$ct_id);
+
+			$query_hotel = $this->db->get();
+
+			return $query_hotel->result();
+		}
 	 
 	}
 ?>

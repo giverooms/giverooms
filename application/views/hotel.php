@@ -8,15 +8,13 @@
               </div>
               <div class="col-md-12" id="left_menu">
                 <ul>
-                  <li><span class="glyphicon glyphicon-star"></span>Yangon <span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Saung Chaung<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Dagon<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Hledan<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Sule<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Pazun Taung<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Thingan Gyun<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>Kyi Myin Taing<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>La Thar<span class="pull-right">(235)</span></li>
+                  <?php
+                    foreach($hotel_info as $info):
+                  ?>
+                  <li><span class="glyphicon glyphicon-star"></span><?php print $info->hotel_name; ?><span class="pull-right">(235)</span></li>
+                  <?php
+                    endforeach;
+                  ?>
                 </ul>
               </div>
               <div class="col-md-12" id="left_menu">
@@ -104,156 +102,27 @@
                 </div>
                 <!-- /end search box section -->
               </div>
+
             <!-- start content show -->
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="right_content_show">
+                <?php
+                  foreach($hotel_info as $info):
+                ?>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
+                    <img src="<?php print base_url().$info->hotel_image; ?>" class="img-responsive center-block">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
+                      <small><?php print $info->hotel_type; ?></small>
+                      <h4><?php print $info->hotel_name; ?></h4>
                       <p>
                        Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="right_content_show">
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="right_content_show">
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <img src="images/test.jpg" class="img-responsive center-block">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small>3 star hotel</small>
-                      <h4>Hotel Chindwin</h4>
-                      <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <?php
+                  endforeach;
+                ?>
               </div>
             <!-- /end content show -->
             </div>
