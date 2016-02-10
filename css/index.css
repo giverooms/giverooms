@@ -81,8 +81,9 @@ video{
 	color: white;
 }
 #slide-header{
-	background-color: rgba(44, 62, 80,1.0);
-	color: white;
+	/*background-color: rgba(44, 62, 80,1.0);*/
+	background: #f7f7f7;
+	color: #112e5e;
 	text-align: center;
 	padding: 0 0 10px 0;
 	margin: 0 0 10px 0;
@@ -90,7 +91,7 @@ video{
 }
 #slide{
 	background-color: white;
-	border-bottom: 2px solid #e67e22;
+	border-bottom: 2px solid #112e5e;
 	padding-bottom: 40px;
 }
 
@@ -139,8 +140,9 @@ div.body-parts{
 
 }
 #text_region{
-	background-color: rgba(44, 62, 80,1.0);
-	color: white;
+	/*background-color: rgba(44, 62, 80,1.0);*/
+	background-color: #f7f7f7;
+	color: #112e5e;
 	text-align: center;
 }
 /*******************/
@@ -283,6 +285,7 @@ footer{
 	min-height:100px;
 	/*background-color: rgba(44, 62, 80,1.0);*/
 	/*background: #112e5e;*/
-	background: #333;
+	background: #112e5e;
+
 	padding: 20px 0 20px 0;
 }

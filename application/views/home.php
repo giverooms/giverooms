@@ -119,8 +119,10 @@
 
 
 <!--************* BODAY PARTS **********************-->
-    <div class="row" id="text_region">
-        <h3>You can search hotel easily by <b>Region/State</b> in Myanmar</h3>
+    <div class="row" style="background:white;">
+        <div class="container" id="text_region">
+            <h3>You can search hotel easily by <b>Region/State</b> in Myanmar</h3>
+        </div>
     </div>
     <div class="row body-parts">
     	<div class="container">
