@@ -17,7 +17,8 @@ body{
 }
 header{
 	height: 60px;
-	background-color: rgba(229, 103, 23, 0.8);
+	background-color: rgba(44, 62, 80,0.9);
+	/*background-color: rgba(229, 103, 23, 0.8);*/
 	opacity: 1;
 	box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;
 }
@@ -46,7 +47,7 @@ nav a{
 	background: url("images/3.jpg") no-repeat;
 }
 #search-container{
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(44, 62, 80,0.3);
 	box-shadow: rgba(0,0,0,0.1) 1px 10px 10px 1px;
 	margin-top: 100px;
 }
