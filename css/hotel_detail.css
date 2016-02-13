@@ -1,0 +1,41 @@
+/* hotel name and title */
+#hotel_name{
+	background: white;
+	border-radius: 5px;
+	min-height: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+#hotel_name b{
+	font-size: 25px;
+}
+#show_map{
+	border: 1px solid #f7f7f7;
+	border-radius: 10px;
+	min-height: 70px;
+	line-height: 70px;
+	text-align: center;
+}
+
+/* hotel detail content */
+#hotel_detail_content{
+	border:1px solid black;
+	min-height: 300px;
+	padding: 0px;
+}
+#left_content{
+	padding-left: 0px;
+}
+#left_inner{
+	background: white;
+	min-height: 200px;
+}
+
+#right_content_detail{
+	padding-right: 0px;
+}
+#right_inner{
+	background: white;
+	min-height: 200px;
+}
