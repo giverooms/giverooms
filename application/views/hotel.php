@@ -110,6 +110,7 @@
                 ?>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
+                    <a href="<?php echo base_url();$info->hotel_name?>hotel/<?php echo $info->hotel_name?>">
                     <img src="<?php print base_url().$info->hotel_image; ?>" class="img-responsive center-block">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
                       <small><?php print $info->hotel_type; ?></small>
@@ -118,6 +119,7 @@
                        Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
                       </p>
                     </div>
+                    </a>
                   </div>
                 </div>
                 <?php
