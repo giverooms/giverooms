@@ -57,16 +57,16 @@
 
             <div id="search-by-region" class="row">
                     <span id="label">Search By Region :</span>
-                    <a href="<?php echo base_url(); ?>hotel/yangon">Yangon</a>
-                    <a href="<?php echo base_url(); ?>hotel/mandalay">Mandalay</a>
-                    <a href="<?php echo base_url(); ?>hotel/naypyitaw">Nay Pyi Taw</a>
-                    <a href="<?php echo base_url(); ?>hotel/bago">Bagan</a>
-                    <a href="<?php echo base_url(); ?>hotel/pyinoolwin">Pyin Oo Lwin</a>
-                    <a href="<?php echo base_url(); ?>hotel/ngapali">Ngapali</a>
-                    <a href="<?php echo base_url(); ?>hotel/ngwesaung">Ngwe Saung</a>
-                    <a href="<?php echo base_url(); ?>hotel/chaungthar">Chaung Thar</a>
-                    <a href="<?php echo base_url(); ?>hotel/kyaikhteyoe">Kyaik Hte Yoe</a>
-                    <a href="<?php echo base_url(); ?>hotel/taunggyi">Taung Gyi</a>
+                    <a href="<?php echo base_url(); ?>hotels/yangon">Yangon</a>
+                    <a href="<?php echo base_url(); ?>hotels/mandalay">Mandalay</a>
+                    <a href="<?php echo base_url(); ?>hotels/naypyitaw">Nay Pyi Taw</a>
+                    <a href="<?php echo base_url(); ?>hotels/bago">Bagan</a>
+                    <a href="<?php echo base_url(); ?>hotels/pyinoolwin">Pyin Oo Lwin</a>
+                    <a href="<?php echo base_url(); ?>hotels/ngapali">Ngapali</a>
+                    <a href="<?php echo base_url(); ?>hotels/ngwesaung">Ngwe Saung</a>
+                    <a href="<?php echo base_url(); ?>hotels/chaungthar">Chaung Thar</a>
+                    <a href="<?php echo base_url(); ?>hotels/kyaikhteyoe">Kyaik Hte Yoe</a>
+                    <a href="<?php echo base_url(); ?>hotels/taunggyi">Taung Gyi</a>
             </div>
         </div>
         <div class="col-sm-2"></div>
@@ -144,7 +144,7 @@
                             foreach ($query->result_array() as $row){
                         ?>
                         <li class="animation">
-                            <a href="<?php echo base_url(); ?>hotel/<?php echo $row['ct_name_en'];?>">
+                            <a href="<?php echo base_url(); ?>hotel-in-<?php echo $row['ct_name_en']; ?>">
                                 <?php echo $row['ct_name_en']; ?>
                             </a>
                         </li>

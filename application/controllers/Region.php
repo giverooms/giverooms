@@ -20,13 +20,16 @@ class Region extends CI_Controller {
 
     public function hotel($city)
     {
+
         $data = $this->get_hotel($city);
         $this->load->view('templates/header');
         $this->load->view('hotel',$data);
         $this->load->view('templates/footer');
+
     }
 
     public function get_hotel($ct_name){
+        $ct_name = trim(str_replace('hotel-in-', '', $this->uri->segment(1)));
         $data['hotel_info'] = $this->Homemodel->getHotel($ct_name);
 
         return $data;

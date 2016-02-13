@@ -3,6 +3,7 @@
 
 		public function __construct(){
 	        parent::__construct();
+	        $this->load->helper('url');
 	    }
 	 
 		function get_region_data(){
@@ -16,9 +17,10 @@
 		}
 
 		function getCityId($ct_name){
+			$this->ct_name = $ct_name;
 			$this->db->select("ct_id");
 			$this->db->from("city");
-			$this->db->where("ct_name_en",$ct_name);
+			$this->db->where("ct_name_en",$this->ct_name);
 
 			$query_id = $this->db->get();
 
@@ -28,14 +30,12 @@
 
 			}
 
-			$data = 1;
-
 			return $data;
 		}
 
 		function getHotel($ct_name){
-
-			$ct_id = $this->getCityId('$ct_name');
+			$this->ct_name = $ct_name;
+			$ct_id = $this->getCityId($this->ct_name);
 
 			$this->db->select("*");
 			$this->db->from("hotel");
