@@ -20,7 +20,6 @@
 
 /* hotel detail content */
 #hotel_detail_content{
-	border:1px solid black;
 	min-height: 300px;
 	padding: 0px;
 }
@@ -33,11 +32,15 @@
 }
 
 #right_content_detail{
-	padding-right: 0px;
+	padding: 0px;
 }
 #right_inner{
-	background: white;
+	padding: 0px;
 	min-height: 200px;
+}
+#slide_gallery_box{
+	padding: 0px;
+	margin-bottom: 20px;
 }
 
 /* slider code */
@@ -58,7 +61,7 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background: url('img/a17.png') no-repeat;
+    background: url('http://localhost/giverooms/img/a17.png') no-repeat;
     overflow: hidden;
 }
 .jssora05l { background-position: -10px -40px; }
@@ -106,9 +109,9 @@
     left: 0px;
     width: 68px;
     height: 68px;
-    border: #000 2px solid;
+    /*border: #000 2px solid;*/
     box-sizing: content-box;
-    background: url('img/t01.png') -800px -800px no-repeat;
+    background: url('http://localhost/giverooms/img/t01.png') -800px -800px no-repeat;
     _background: none;
 }
 
@@ -144,4 +147,9 @@
     /* ie quirks mode adjust */
     width /**/: 72px;
     height /**/: 72px;
+}
+
+#detail_info{
+	background: white;
+	min-height: 400px;
 }
