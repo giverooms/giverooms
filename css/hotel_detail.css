@@ -32,6 +32,15 @@
     margin-bottom: 20px;
     border-radius: 5px;
 }
+#left_inner .header{
+    text-align: center;
+    background: #f88e00;
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600px;
+}
 
 #right_content_detail{
 	padding: 0px;

@@ -26,14 +26,23 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="hotel_detail_content">
       <!-- /left content -->
       <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="left_content">
-      
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner"></div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner"></div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
+            <div class="row header">Hotel Description</div>
+            <p style="text-align: justify;"><br/>
+                My Test Hotelကေတာ့ ဗိုလ္တစ္ေထာင္ဘုရား၊ ဗိုလ္တစ္ေထာင္ဆိပ္ကမ္းနဲ႔ နီးပါတယ္။ ATM,Elevator & free Wifi ရပါတယ္။ အခန္းတုိင္းကို ေသခ်ာျပင္ဆင္ထားျပီး ထုိင္စရာေနရာ ၊ အဲကြန္း၊ ေရခဲေသတၱာ၊ တီဗီ၊ ေရခ်ိဳးခန္းပါပါတယ္။ ဟုိတယ္တြင္းစားေသာက္ဆုိင္မွာ ယူရုိ၊ ထုိင္း၊ တရုတ္၊ ျမန္မာ အစားအစာေတြရႏုိင္ျပီး နံနက္စာ အခမဲ့ေကြ်းပါတယ္။ စီးပြားေရးအတြက္ေကာင္းသလုိ အခန္းသန္႔ရွင္းေရး၊ ကားပါကင္၊ ကားအငွား၊ လံုျခံဳေရးတုိ႔ရွိပါတယ္။ ဗိုလ္တစ္ေထာင္ဘုရား၊ ဆိပ္ကမ္းကေန ၅မိနစ္လမ္းေလွ်ာက္ရျပီး City Centre နဲ႔ဆုိ ၅ မိနစ္ေလာက္ ကားေမာင္းရင္ေရာက္ပါတယ္ ၊ လမ္းငါးဆယ္ ကားဂိတ္နဲ႔နီးပါတယ္။
+            </p>
+        </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
+            <div class="row header">Hotel Sevices</div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
+            <div class="row header">Other</div>
+        </div>
 
       </div><!-- /end left content -->
 
