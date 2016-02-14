@@ -53,6 +53,6 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['hotel-in-(:any)'] = 'region/hotel/$1';
-$route['register'] = 'register';
-$route['hotel-in-(:any)/(:any)'] = 'hotel/detail/$1';
+$route['hotels-in-(:any)'] = 'region/hotel/$1';
+$route['register.html'] = 'register';
+$route['hotels-in-(:any)/(:any)'] = 'hotel/detail/$1';

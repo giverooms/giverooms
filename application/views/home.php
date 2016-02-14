@@ -57,16 +57,16 @@
 
             <div id="search-by-region" class="row">
                     <span id="label">Search By Region :</span>
-                    <a href="<?php echo base_url(); ?>hotels/yangon">Yangon</a>
-                    <a href="<?php echo base_url(); ?>hotels/mandalay">Mandalay</a>
-                    <a href="<?php echo base_url(); ?>hotels/naypyitaw">Nay Pyi Taw</a>
-                    <a href="<?php echo base_url(); ?>hotels/bago">Bagan</a>
-                    <a href="<?php echo base_url(); ?>hotels/pyinoolwin">Pyin Oo Lwin</a>
-                    <a href="<?php echo base_url(); ?>hotels/ngapali">Ngapali</a>
-                    <a href="<?php echo base_url(); ?>hotels/ngwesaung">Ngwe Saung</a>
-                    <a href="<?php echo base_url(); ?>hotels/chaungthar">Chaung Thar</a>
-                    <a href="<?php echo base_url(); ?>hotels/kyaikhteyoe">Kyaik Hte Yoe</a>
-                    <a href="<?php echo base_url(); ?>hotels/taunggyi">Taung Gyi</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-yangon">Yangon</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-mandalay">Mandalay</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-naypyitaw">Nay Pyi Taw</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-bago">Bagan</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-pyinoolwin">Pyin Oo Lwin</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-ngapali">Ngapali</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-ngwesaung">Ngwe Saung</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-chaungthar">Chaung Thar</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-kyaikhteyoe">Kyaik Hte Yoe</a>
+                    <a href="<?php echo base_url(); ?>hotels-in-taunggyi">Taung Gyi</a>
             </div>
         </div>
         <div class="col-sm-2"></div>
@@ -79,12 +79,14 @@
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="top_hotel">
                 <ul id="flexiselDemo3">
                     <li>
+                        <a href="<?php echo base_url(); ?>hotels-in-yangon/my-test-hotel-name-1">
                         <img src="upload/hotel/my-test-hotel-name-1/view/201602050001.jpg" class="img-responsive center-block">
                             <p>
                                 <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
                                 Inya Lake<br/>
                                 Good 7.4 based on 757 reviews
                             </p>
+                        </a>
                     </li>
                     <li>
                         <img src="upload/hotel/my-test-hotel-name-2/view/201602050002.jpg" class="img-responsive center-block">
@@ -144,7 +146,7 @@
                             foreach ($query->result_array() as $row){
                         ?>
                         <li class="animation">
-                            <a href="<?php echo base_url(); ?>hotel-in-<?php echo $row['ct_name_en']; ?>">
+                            <a href="<?php echo base_url(); ?>hotels-in-<?php echo $row['ct_name_en']; ?>">
                                 <?php echo $row['ct_name_en']; ?>
                             </a>
                         </li>

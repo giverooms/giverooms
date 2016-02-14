@@ -1,5 +1,5 @@
 <?php
-  $slug = trim(str_replace('hotel-in-', '', $this->uri->segment(1)));
+  $slug = trim(str_replace('hotels-in-', '', $this->uri->segment(1)));
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/hotel.css">
 <div class="container-fluid" id="page_content">
@@ -114,7 +114,7 @@
                 ?>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
-                    <a href="<?php echo base_url();?>hotel-in-<?php echo $slug; ?>/<?php echo $slug1;?>">
+                    <a href="<?php echo base_url();?>hotels-in-<?php echo $slug; ?>/<?php echo $slug1;?>">
                     <img src="<?php print base_url().$info->hotel_image; ?>" class="img-responsive center-block">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
                       <small><?php print $info->hotel_type; ?></small>
