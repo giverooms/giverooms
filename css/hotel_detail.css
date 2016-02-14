@@ -13,8 +13,8 @@
 #show_map{
 	border: 1px solid #f7f7f7;
 	border-radius: 10px;
-	min-height: 70px;
-	line-height: 70px;
+	min-height: 50px;
+	line-height: 50px;
 	text-align: center;
 }
 
@@ -29,6 +29,8 @@
 #left_inner{
 	background: white;
 	min-height: 200px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 #right_content_detail{
@@ -40,7 +42,6 @@
 }
 #slide_gallery_box{
 	padding: 0px;
-	margin-bottom: 20px;
 }
 
 /* slider code */
@@ -152,4 +153,129 @@
 #detail_info{
 	background: white;
 	min-height: 400px;
+    padding: 0px;
+}
+
+/* tab slide code */
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+    padding: 0px;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links{
+    padding: 0px;
+    background:#e6e6e6;
+    min-height: 35px;
+}
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links li {
+    padding: 0px 20px;
+    float:left;
+    list-style:none;
+    min-height: 35px;
+    width: 150px;
+}
+
+.tab-links a {
+    display:inline-block;
+    border-radius:3px 3px 0px 0px;
+    font-size: 14px;
+    line-height: 35px;
+    font-weight:600;
+    color:#4c4c4c;
+    transition:all linear 0.15s;
+}
+
+.tab-links a:hover {
+    text-decoration:none;
+}
+.tab-links li:hover{
+    background:white;
+}
+
+li.active , li.active a:hover {
+    background: white;
+    color:#4c4c4c;
+}
+li.active{
+    background:white;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    padding: 10px;
+    border-radius:3px;
+    /*box-shadow:-1px 1px 1px rgba(0,0,0,0.15);*/
+    background:#fff;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+#room_img{
+    padding: 0px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+#room_info_row{
+    border: 1px solid silver;
+    margin-bottom: 30px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    background: #f7f7f7;
+}
+#room_info{
+    margin-top: 10px;
+    padding: 0px;
+    min-height: 30px;
+}
+#room_info > span{
+    color: silver;
+    font-size: 20px;
+    padding: 5px;
+    border:1px solid silver;
+    border-radius: 3px;
+}
+#room_detail_lb{
+    min-height: 30px;
+    background: rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+#room_detail_lb > div{
+    text-align: center;
+    min-height: 30px;
+    line-height: 30px;
+}
+#type_lb{
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+#info_box{
+    padding: 10px;
+    border-right: 1px solid silver;
+    min-height: 204px;
+    line-height: 183px;
+    text-align: center;
+}
+#info_box:last-child{
+    border-right: 0px;
+}
+#info_box > span{
+    font-size: 25px;
+    color: silver;
 }

@@ -14,7 +14,8 @@
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.core.js"></script>
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.utils.js"></script>
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.slider.js"></script>
-
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/font-awesome.css"/>
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap-social.css"/>
       <script type="text/javascript">
         $(document).ready(function(){
           $("#flexiselDemo3").flexisel({
