@@ -27,7 +27,21 @@
       <!-- /left content -->
       <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="left_content">
 
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
+            <form class="form" style="margin-top: 10px;margin-bottom: 10px;">
+                <input type="text" class="form-control" placeholder="check in"><br/>
+                <input type="text" class="form-control" placeholder="check out"><br/>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="number" min="1" class="form-control" placeholder="guest">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="number" min="1" class="form-control" placeholder="rooms">
+                    </div>
+                </div><br/>
+                <input type="submit" name="submit" value="Search" class="form-control btn btn-warning btn-small">
+            </form>
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
             <div class="row header">Hotel Description</div>
@@ -38,6 +52,20 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
             <div class="row header">Hotel Sevices</div>
+            <table class="table">
+                <tr>
+                    <td><span class="fa fa-cutlery"></span>&nbsp;Restaurant</td>
+                </tr>
+                <tr>
+                    <td><span class="fa fa-beer"></span>&nbsp;Bar</td>
+                </tr>
+                <tr>
+                    <td><span class="fa fa-life-ring"></span>&nbsp;Air Conditioning</td>
+                </tr>
+                <tr>
+                    <td><small style="color: gray;">Click <a >Service and Facilities</a> for more information <span class="fa fa-hand-o-right"></span></small></td>
+                </tr>
+            </table>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
@@ -171,8 +199,8 @@
                                </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <span class="fa fa-user"></span>
-                                    <span class="fa fa-user"></span>
+                                    <span class="fa fa-male"></span>
+                                    <span class="fa fa-female"></span>
                                 </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
@@ -201,8 +229,8 @@
                                </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <span class="fa fa-user"></span>
-                                    <span class="fa fa-user"></span>
+                                     <span class="fa fa-male"></span>
+                                    <span class="fa fa-female"></span>
                                 </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
@@ -231,8 +259,8 @@
                                </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <span class="fa fa-user"></span>
-                                    <span class="fa fa-user"></span>
+                                     <span class="fa fa-male"></span>
+                                    <span class="fa fa-female"></span>
                                 </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
@@ -247,10 +275,119 @@
 
                         </div><!-- /end tab1 -->
                  
-                        <div id="tab2" class="col-xs-12 col-sm-12 col-md-12 tab">
-                            <p>Tab #2 content goes here!</p>
-                            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
-                        </div>
+                        <div id="tab2" class="col-xs-12 col-sm-12 col-md-12 tab" style="padding: 0px;">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding:0px;">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Hotel Rules</div>
+                                    <div class="panel-body">
+                                        <li>Check in After 12:00 PM</li>
+                                        <li>Check out Before 11:00</li>
+                                        <li>AMInternational Guests Friendly</li>
+                                        <li>Pure Vegetarian Kitchen</li>
+                                        <li>Option of Paying at Hotel</li>
+                                        <li>Triple Occupancy is Allowed</li>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Facilities and Service</div>
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tr>
+                                                <td><span class="fa fa-car"></span>&nbsp;Packing</td>
+                                                <td>-&nbsp;Car Packing</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-cutlery"></span>&nbsp;Breakfast</td>
+                                                <td>-&nbsp;Breakfast Include</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-hotel"></span>&nbsp;Housekeeping</td>
+                                                <td>-&nbsp;Housekeeping<br/>-&nbsp;Washiing Machine<br/>-&nbsp;Towels Include</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-life-ring"></span>&nbsp;Air Conditioning</td>
+                                                <td>-&nbsp;Available</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-wifi"></span>&nbsp;Wifi / Internet</td>
+                                                <td>-&nbsp;Free Wifi</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-beer"></span>&nbsp;Bar</td>
+                                                <td>-&nbsp;Available</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-bank"></span>&nbsp;ATM / Bank</td>
+                                                <td>-&nbsp;Available ATM / Currency Exchange</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding:0px;">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Hotel Rules</div>
+                                    <div class="panel-body">
+                                        <li>Check in After 12:00 PM</li>
+                                        <li>Check out Before 11:00</li>
+                                        <li>AMInternational Guests Friendly</li>
+                                        <li>Pure Vegetarian Kitchen</li>
+                                        <li>Option of Paying at Hotel</li>
+                                        <li>Triple Occupancy is Allowed</li>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">How to Go?</div>
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tr>
+                                                <th>From</th>
+                                                <th>Traffic</th>
+                                                <th>Time(About)</th>
+                                                <th>Fee(About)</th>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Airport</td>
+                                                <td><span class="fa fa-taxi"></span>&nbsp;Taxi</td>
+                                                <td>30 Min</td>
+                                                <td>5000 mmk / 4 $</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-bus"></span>&nbsp;Bus</td>
+                                                <td>1 : 30 hr</td>
+                                                <td>300 mmk / 20 Cents</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-bicycle"></span>&nbsp;Bicycle</td>
+                                                <td>1 : 30 hr</td>
+                                                <td>300 mmk / 20 Cents</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="3">Highway Bus Stop</td>
+                                                <td><span class="fa fa-taxi"></span>&nbsp;Taxi</td>
+                                                <td>30 Min</td>
+                                                <td>5000 mmk / 4 $</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-bus"></span>&nbsp;Bus</td>
+                                                <td>1 : 30 hr</td>
+                                                <td>300 mmk / 20 Cents</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="fa fa-bicycle"></span>&nbsp;Bicycle</td>
+                                                <td>1 : 30 hr</td>
+                                                <td>300 mmk / 20 Cents</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /end tab 2 -->
 
                     </div>
                 </div><!-- /end dynamic tab -->
