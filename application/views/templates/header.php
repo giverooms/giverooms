@@ -16,6 +16,7 @@
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.slider.js"></script>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/font-awesome.css"/>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap-social.css"/>
+      <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico"/>
       <script type="text/javascript">
         $(document).ready(function(){
           $("#flexiselDemo3").flexisel({
