@@ -179,7 +179,7 @@
                                     Maximum Stay Here
                                 </div>
                                 <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3" style="padding: 0px;">
-                                    Price
+                                    Description
                                 </div>
                             </div>
 
@@ -194,8 +194,29 @@
                                         <span class="glyphicon glyphicon-film"></span>
                                         <span class="glyphicon glyphicon-phone-alt"></span>
                                         <span class="glyphicon glyphicon-signal"></span>
-                                        <span class="glyphicon glyphicon-plus" style="color: #f88e00;"></span>
+                                        <a id="4" title="Edit this item" class="launch-modal" href="#editexpenses"><span class="glyphicon glyphicon-plus" class="launch-model" style="color: #f88e00;"></span></a>
                                     </div>
+
+                                    <div class="modal fade" id="editexpenses" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                         
+                                         
+                                         
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                        </div><!-- /.modal-content -->
+                                      </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+
                                </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
@@ -203,12 +224,14 @@
                                     <span class="fa fa-female"></span>
                                 </div>
 
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <span class="fa fa-usd" style="font-size: 16px;"></span>&nbsp;3333
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box" style="line-height: 18px;">
+                                    <p style="text-align: justify;">My Test Hotelကေတာ့ ဗိုလ္တစ္ေထာင္ဘုရား၊ ဗိုလ္တစ္ေထာင္ဆိပ္ကမ္းနဲ႔ နီးပါတယ္။ ATM,Elevator & free Wifi ရပါတယ္။ အခန္းတုိင္းကို ေသခ်ာျပင္ဆင္ထားျပီး ထုိင္စရာေနရာ ၊ အဲကြန္း၊ ေရခဲေသတၱာ၊ တီဗီ၊ ေရခ်ိဳးခန္းပါပါတယ္။ </p>
                                 </div>
 
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <button class="btn btn-warning btn-lg">Book Now</button>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box" style="line-height: 30px;">
+                                    <h4>30000 mmk / $27000</h4><br/>
+                                    <button class="btn btn-warning btn-small">Book Now</button><br/><br/>
+                                    <button class="btn btn-info btn-small">view detail</button>
                                 </div>
 
                             </div>
@@ -402,6 +425,7 @@
 
   </div><!--/end container -->
 </div>
+
 <script>
     jQuery(document).ready(function() {
         jQuery('.tabs .tab-links a').on('click', function(e)  {
@@ -415,5 +439,19 @@
      
             e.preventDefault();
         });
+    });
+
+    $(document).ready(function(){
+
+        $(".launch-modal").click(function(){
+
+            $("#editexpenses").modal({
+
+                keyboard: false
+
+            });
+
+        }); 
+
     });
 </script>
