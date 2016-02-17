@@ -185,10 +185,12 @@
 
                             <div class="row" id="room_info_row">
                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 10px;border-right: 1px solid silver;">
-                                    <span id="type_lb">Excellent</span>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_img">
-                                        <img src="<?php echo base_url(); ?>images/test.jpg" class="img-responsive">
-                                    </div>
+                                    <a href="<?php base_url(); ?>my-test-hotel-name/excellent">
+                                        <span id="type_lb">Excellent</span>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_img">
+                                            <img src="<?php echo base_url(); ?>images/test.jpg" class="img-responsive">
+                                        </div>
+                                    </a>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_info">
                                         <span class="glyphicon glyphicon-signal"></span>
                                         <span class="glyphicon glyphicon-film"></span>
