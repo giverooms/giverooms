@@ -22,6 +22,7 @@ class Region extends CI_Controller {
     {
 
         $data = $this->get_hotel($city);
+        
         $this->load->view('templates/header');
         $this->load->view('hotel',$data);
         $this->load->view('templates/footer');
