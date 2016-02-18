@@ -78,40 +78,18 @@
     	<div class="container">
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="top_hotel">
                 <ul id="flexiselDemo3">
+                    <?php foreach($top_hotels as $top_hotel): ?>
                     <li>
-                        <a href="<?php echo base_url(); ?>hotels-in-yangon/my-test-hotel-name-1">
-                        <img src="upload/hotel/my-test-hotel-name-1/view/201602050001.jpg" class="img-responsive center-block">
+                        <a href="<?php echo base_url(); ?>hotels-in-<?php echo slug_url($top_hotel->region_name_en); ?>/<?php echo slug_url($top_hotel->hotel_name); ?>">
+                        <img src="<?php echo $top_hotel->hotel_image; ?>" class="img-responsive center-block">
                             <p>
-                                <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
-                                Inya Lake<br/>
+                                <b style="font-size:16px;"><?php echo $top_hotel->hotel_name; ?></b><br/>
+                                <?php echo $top_hotel->hotel_type; ?><br/>
                                 Good 7.4 based on 757 reviews
                             </p>
                         </a>
                     </li>
-                    <li>
-                        <img src="upload/hotel/my-test-hotel-name-2/view/201602050002.jpg" class="img-responsive center-block">
-                            <p>
-                                <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
-                                Inya Lake<br/>
-                                Good 7.4 based on 757 reviews
-                            </p>
-                    </li>
-                    <li>
-                            <img src="upload/hotel/mandalay-test-hotel/view/201602050003.jpg" class="img-responsive center-block">
-                            <p>
-                                <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
-                                Inya Lake<br/>
-                                Good 7.4 based on 757 reviews
-                            </p>
-                    </li>
-                    <li>
-                        <img src="upload/hotel/mandalay-test-hotel-2/view/201602050004.jpg" class="img-responsive center-block">
-                            <p>
-                                <b style="font-size:16px;">nya Lake Hotel 4 Star Hotel</b><br/>
-                                Inya Lake<br/>
-                                Good 7.4 based on 757 reviews
-                            </p>
-                    </li>                                               
+                    <?php endforeach; ?>                                     
                 </ul>  
             </div>
         </div>
@@ -125,7 +103,7 @@
         </div>
     </div>
     <div class="row body-parts">
-    	<div class="container" style="border:1px solid #f7f7f7;">
+    	<div class="container" style="border:1px solid #f7f7f7;padding-bottom: 20px;margin-bottom: 10px;">
         <?php 
             $x="";
             foreach($regions as $region):
@@ -139,14 +117,18 @@
             <div class="col-sm-12" id="body-info-holder">
                 <div class="col-sm-5" id="body-info-btns">
                     <ul id="panel">
+
                         <?php
+
+                            //print select_by_id();
+
                             $quy='SELECT * FROM city where ct_region_id='. $region->region_id;
                             $query = $this->db->query($quy);
 
                             foreach ($query->result_array() as $row){
                         ?>
                         <li class="animation">
-                            <a href="<?php echo base_url(); ?>hotels-in-<?php echo $row['ct_name_en']; ?>">
+                            <a href="<?php echo base_url(); ?>hotels-in-<?php echo slug_url($row['ct_name_en']); ?>">
                                 <?php echo $row['ct_name_en']; ?>
                             </a>
                         </li>
@@ -163,14 +145,18 @@
                     <div u="slides" style="cursor: pointer; position: absolute; left: 0px; top: 0px; width: 400px; height: 200px;
                         overflow: hidden; z-index:-1;">
                         <?php 
-                            $h_quy = 'SELECT * FROM hotel WHERE hotel_r_id = '.$region->region_id;
+                            $h_quy = 'SELECT * FROM hotel  WHERE hotel_r_id = '.$region->region_id;
                             $h_query = $this->db->query($h_quy);
 
                             foreach($h_query->result_array() as $h_row){
                         ?>
                         <div>
                             <img u=image src="<?php echo $h_row['hotel_image']; ?>" />
-                            <div u="thumb"><?php echo $h_row['hotel_name']; ?></div>
+                            <div u="thumb">
+                                <a href="hotels-in-<?php echo slug_url($region->region_name_en); ?>/<?php slug_url($h_row['hotel_name']); ?>">
+                                    <?php echo $h_row['hotel_name']; ?>
+                                </a>
+                            </div>
                         </div>
 
                         <?php 
@@ -205,11 +191,13 @@
                 </div>
             </div>
         </div>
+    
         <?php endforeach; ?>
-        <div class="col-md-12" style="padding:0px;">
-            <button class="btn btn-small btn-info pull-right">see more</button>
+        <div class="row">
+          <button type="button" class="btn btn-info see">See More</button>
         </div>
         </div>
+
     </div>
 
     <!--********** HOW DO WE WORK *****************-->
@@ -239,8 +227,15 @@
         </div>
         <div class="col-sm-2"></div>
     </div>
+    <style type="text/css">
+        #seemore{
+            display: none;
+        }
+    </style>
     <script type="text/javascript">
-    $document.ready(function(){
-        window.alert('kyawminhtwe');
+    $(document).ready(function(){
+        $('.see').click(function(){
+            $('#seemore').slideDown();
+        });
     });
     </script>
