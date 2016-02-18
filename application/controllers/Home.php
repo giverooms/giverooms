@@ -14,6 +14,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['regions'] = $this->Homemodel->get_region_data();
+		$data['top_hotels'] = $this->Homemodel->getTopHotel();
 
 		$this->load->view('templates/header');
 		$this->load->view('home',$data);
