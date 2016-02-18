@@ -45,6 +45,20 @@
 
 			return $query_hotel->result();
 		}
+
+		function getTopHotel(){
+
+			$this->db->select("*");
+			$this->db->from("hotel ht");
+			$this->db->order_by("status","desc");
+			$this->db->join("region r","ht.hotel_r_id = r.region_id","left");
+			$this->db->limit(0,5);
+
+			$top_query = $this->db->get();
+
+			return $top_query->result();
+
+		}
 	 
 	}
 ?>
