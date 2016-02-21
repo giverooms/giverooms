@@ -1,3 +1,9 @@
+<?php
+    foreach ($hotel_detail as $detail) {
+    # code...
+    print $detail->hotel_name;
+  }
+?>
 <!--************* SEARCH **********************-->
     <img src="<?php echo base_url(); ?>images/Bagan.original.3730.jpg" id="background">
     <div id="search-container-wrap" class="row">

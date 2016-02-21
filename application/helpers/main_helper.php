@@ -15,19 +15,34 @@ if ( ! function_exists('slug_url'))
     }   
 }
 
+if (!function_exists("slice_array")) {
+    
+    function slice_array($array = ""){
+
+        if(is_string($array)){
+            $array = explode(",", $array);
+        }
+        else{
+            $array = "Is not String !";
+        }
+
+        return $array;
+    }
+
+}
+
 if(!function_exists('select_by_id')){
 
-	function select_by_id($id=""){
+	function select_by_id($id="", $table = ""){
 
         $CI =& get_instance();
         $CI->load->database(); 
 
-        $sql = "select * from hotel"; 
+        $sql = "select * from room where room_hotel_id = ".$id; 
         $query = $CI->db->query($sql);
         $row = $query->result();
 
-        foreach($row as $val){
-        	return $val->hotel_name;
-        }
+        return $row;
    }
 }
+

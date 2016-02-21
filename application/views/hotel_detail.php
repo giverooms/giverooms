@@ -6,12 +6,16 @@
 <div class="container-fluid" id="page_content">
   <div class="container">
 
+  <?php
+    foreach($hotel_detail as $detail){
+?>
+
   <!-- /hotel name and title -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="hotel_name">
 
       <div class="col-xs-9 col-sm-9 col-md-10 col-lg-10" style="padding:0px;">
         <p>
-          <b>My Test Hotel Name<sup><span class="glyphicon glyphicon-star"></span></sup></b><br/>
+          <b><?php print $detail->hotel_name; ?><sup><span class="glyphicon glyphicon-star"></span></sup></b><br/>
           <small>Myomakyaung Street, Dagon Tsp, Yangon.</small>
         </p>
       </div>
@@ -46,7 +50,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
             <div class="row header">Hotel Description</div>
             <p style="text-align: justify;"><br/>
-                My Test Hotelကေတာ့ ဗိုလ္တစ္ေထာင္ဘုရား၊ ဗိုလ္တစ္ေထာင္ဆိပ္ကမ္းနဲ႔ နီးပါတယ္။ ATM,Elevator & free Wifi ရပါတယ္။ အခန္းတုိင္းကို ေသခ်ာျပင္ဆင္ထားျပီး ထုိင္စရာေနရာ ၊ အဲကြန္း၊ ေရခဲေသတၱာ၊ တီဗီ၊ ေရခ်ိဳးခန္းပါပါတယ္။ ဟုိတယ္တြင္းစားေသာက္ဆုိင္မွာ ယူရုိ၊ ထုိင္း၊ တရုတ္၊ ျမန္မာ အစားအစာေတြရႏုိင္ျပီး နံနက္စာ အခမဲ့ေကြ်းပါတယ္။ စီးပြားေရးအတြက္ေကာင္းသလုိ အခန္းသန္႔ရွင္းေရး၊ ကားပါကင္၊ ကားအငွား၊ လံုျခံဳေရးတုိ႔ရွိပါတယ္။ ဗိုလ္တစ္ေထာင္ဘုရား၊ ဆိပ္ကမ္းကေန ၅မိနစ္လမ္းေလွ်ာက္ရျပီး City Centre နဲ႔ဆုိ ၅ မိနစ္ေလာက္ ကားေမာင္းရင္ေရာက္ပါတယ္ ၊ လမ္းငါးဆယ္ ကားဂိတ္နဲ႔နီးပါတယ္။
+               <?php print $detail->hotel_desc; ?>
             </p>
         </div>
 
@@ -72,13 +76,13 @@
             <div class="row header">Other</div>
         </div>
 
-      </div><!-- /end left content -->
+    </div><!-- /end left content -->
 
       <!-- /right content -->
-      <div class="col-xs-12 col-sm-4 col-md-9 col-lg-9" id="right_content_detail">
+    <div class="col-xs-12 col-sm-4 col-md-9 col-lg-9" id="right_content_detail">
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="right_inner">
-          
+                                 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="slide_gallery_box">
 
                 <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 853px; height: 456px; overflow: hidden; visibility: hidden;background: gray;">
@@ -88,54 +92,15 @@
                         <div style="position:absolute;display:block;background:url('<?php echo base_url(); ?>img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
                     </div>
                     <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 853px; height: 356px; overflow: hidden;">
+                        <?php
+                            $gal = slice_array($detail->gal_img);
+                            foreach($gal as $val):
+                        ?>
                         <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/01.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-01.jpg" />
+                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/<?php echo slug_url($detail->hotel_name); ?>/gallery/<?php echo $val; ?>" />
+                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/<?php echo slug_url($detail->hotel_name); ?>/gallery/<?php echo $val; ?>" />
                         </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/02.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-02.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/03.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-03.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/04.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-04.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/05.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-05.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/06.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-06.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/07.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-07.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/08.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-08.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/09.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-09.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/10.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-10.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/11.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-11.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/12.jpg" />
-                            <img data-u="thumb" src="<?php echo base_url(); ?>upload/hotel/hotel-name-of-pathein-1/gallery/thumb/thumb-12.jpg" />
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                     <!-- Thumbnail Navigator -->
                     <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:853px;height:100px;" data-autocenter="1">
@@ -182,13 +147,16 @@
                                     Description
                                 </div>
                             </div>
-
+                            <?php  
+                                $row = select_by_id($detail->hotel_id);
+                                foreach($row as $room):
+                            ?>
                             <div class="row" id="room_info_row">
                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 10px;border-right: 1px solid silver;">
                                     <a href="<?php base_url(); ?>my-test-hotel-name/excellent">
-                                        <span id="type_lb">Excellent</span>
+                                        <span id="type_lb"><?php print $room->room_name; ?></span>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_img">
-                                            <img src="<?php echo base_url(); ?>images/test.jpg" class="img-responsive">
+                                            <img src="<?php echo base_url(); ?>upload/room/mgm-hotel/<?php echo $room->room_img; ?>" class="img-responsive">
                                         </div>
                                     </a>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_info">
@@ -199,104 +167,28 @@
                                         <a id="4" title="Edit this item" class="launch-modal" href="#editexpenses"><span class="glyphicon glyphicon-plus" class="launch-model" style="color: #f88e00;"></span></a>
                                     </div>
 
-                                    <div class="modal fade" id="editexpenses" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                          </div>
-                                          <div class="modal-body">
-                                         
-                                         
-                                         
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                        </div><!-- /.modal-content -->
-                                      </div><!-- /.modal-dialog -->
-                                    </div><!-- /.modal -->
-
                                </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
+                                    <?php for($x = 1;$x < $room->room_stay+1;$x++): ?>
                                     <span class="fa fa-male"></span>
-                                    <span class="fa fa-female"></span>
+                                <?php endfor; ?>
+                                    
                                 </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box" style="line-height: 18px;">
-                                    <p style="text-align: justify;">My Test Hotelကေတာ့ ဗိုလ္တစ္ေထာင္ဘုရား၊ ဗိုလ္တစ္ေထာင္ဆိပ္ကမ္းနဲ႔ နီးပါတယ္။ ATM,Elevator & free Wifi ရပါတယ္။ အခန္းတုိင္းကို ေသခ်ာျပင္ဆင္ထားျပီး ထုိင္စရာေနရာ ၊ အဲကြန္း၊ ေရခဲေသတၱာ၊ တီဗီ၊ ေရခ်ိဳးခန္းပါပါတယ္။ </p>
+                                    <p style="text-align: justify;"><?php echo substr($room->room_desc_en, 0,200).".."; ?></p>
                                 </div>
 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box" style="line-height: 30px;">
-                                    <h4>30000 mmk / $27000</h4><br/>
+                                    <h4><?php echo $room->price_us; ?>&nbsp;U$D</h4><br/>
                                     <button class="btn btn-warning btn-small">Book Now</button><br/><br/>
-                                    <button class="btn btn-info btn-small">view detail</button>
+                                    <a href="<?php echo base_url(uri_string())."/".$room->room_name; ?>" class="btn btn-info btn-small">view detial</a>
                                 </div>
 
                             </div>
 
-                            <div class="row" id="room_info_row">
-                               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 10px;border-right: 1px solid silver;">
-                                    <span id="type_lb">Excellent</span>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_img">
-                                        <img src="<?php echo base_url(); ?>images/test.jpg" class="img-responsive">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_info">
-                                        <span class="glyphicon glyphicon-signal"></span>
-                                        <span class="glyphicon glyphicon-film"></span>
-                                        <span class="glyphicon glyphicon-phone-alt"></span>
-                                        <span class="glyphicon glyphicon-signal"></span>
-                                        <span class="glyphicon glyphicon-plus" style="color: #f88e00;"></span>
-                                    </div>
-                               </div>
-
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                     <span class="fa fa-male"></span>
-                                    <span class="fa fa-female"></span>
-                                </div>
-
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <span class="fa fa-usd" style="font-size: 16px;"></span>&nbsp;3333
-                                </div>
-
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <button class="btn btn-warning btn-lg">Book Now</button>
-                                </div>
-
-                            </div>
-
-                            <div class="row" id="room_info_row">
-                               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding: 10px;border-right: 1px solid silver;">
-                                    <span id="type_lb">Excellent</span>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_img">
-                                        <img src="<?php echo base_url(); ?>images/test.jpg" class="img-responsive">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="room_info">
-                                        <span class="glyphicon glyphicon-signal"></span>
-                                        <span class="glyphicon glyphicon-film"></span>
-                                        <span class="glyphicon glyphicon-phone-alt"></span>
-                                        <span class="glyphicon glyphicon-signal"></span>
-                                        <span class="glyphicon glyphicon-plus" style="color: #f88e00;"></span>
-                                    </div>
-                               </div>
-
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                     <span class="fa fa-male"></span>
-                                    <span class="fa fa-female"></span>
-                                </div>
-
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <span class="fa fa-usd" style="font-size: 16px;"></span>&nbsp;3333
-                                </div>
-
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="info_box">
-                                    <button class="btn btn-warning btn-lg">Book Now</button>
-                                </div>
-
-                            </div>
+                        <?php endforeach; ?>
 
                         </div><!-- /end tab1 -->
                  
@@ -427,7 +319,9 @@
 
   </div><!--/end container -->
 </div>
-
+<?php
+    }
+?>
 <script>
     jQuery(document).ready(function() {
         jQuery('.tabs .tab-links a').on('click', function(e)  {

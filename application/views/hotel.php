@@ -1,5 +1,6 @@
 <?php
   $slug = trim(str_replace('hotels-in-', '', $this->uri->segment(1)));
+  
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/hotel.css">
 <div class="container-fluid" id="page_content">

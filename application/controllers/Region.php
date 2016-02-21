@@ -11,14 +11,14 @@ class Region extends CI_Controller {
 
     }
 
-    public function index()
+    function index()
     {
         $this->load->view('templates/header');
         $this->load->view('hotel');
         $this->load->view('templates/footer');  
     }
 
-    public function hotel($city)
+    function hotel($city)
     {
 
         $data = $this->get_hotel($city);
@@ -29,7 +29,8 @@ class Region extends CI_Controller {
 
     }
 
-    public function get_hotel($ct_name){
+    function get_hotel($ct_name){
+        
         $ct_name = trim(str_replace('hotels-in-', '', $this->uri->segment(1)));
         $data['hotel_info'] = $this->Homemodel->getHotel($ct_name);
 
