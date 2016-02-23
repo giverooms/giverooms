@@ -36,4 +36,8 @@ class Region extends CI_Controller {
 
         return $data;
     }
+
+    function getCityInRegion($Region){
+        
+    }
 }

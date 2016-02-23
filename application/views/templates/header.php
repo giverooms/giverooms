@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-      <title>Give Rooms</title>
+      <title>GiveRooms - Find and Book Accommodations, Guest House, Inn, Budget Hotel Rooms in Myanmar</title>
       <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="GiveRooms is Online Hotel Booking Website for Guest House, Inn, Accommodations and Budget Hotel Rooms in Myanmar. Find and Book Hotels in Yangon, Hotels in Madalay, Hotels in Nay Pyi Taw, Hotels in Bagan, Hotels in Ngapali at Low Rate">
       <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
       <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
       <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
@@ -70,11 +71,10 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class=""><a href="<?php echo base_url(); ?>">Home</a></li>
                 <li><a href="navbar-static-top/">Hotel</a></li>
-                <li><a href="navbar-fixed-top/">Place</a></li>
-                <li><a href="navbar-fixed-top/">Guide</a></li>
-                <li><a href="navbar-fixed-top/">Article</a></li>
+                <li><a href="<?php echo base_url(); ?>place.htm">Place</a></li>
+                <li><a href="<?php echo base_url(); ?>guide.htm">Guide</a></li>
                 <li><a href="navbar-fixed-top/">Login</a></li>
-                <li><a href="<?php echo base_url(); ?>register">Register</a></li>
+                <li><a href="<?php echo base_url(); ?>register.htm">Register</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->

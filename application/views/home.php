@@ -1,9 +1,3 @@
-<?php
-    foreach ($hotel_detail as $detail) {
-    # code...
-    print $detail->hotel_name;
-  }
-?>
 <!--************* SEARCH **********************-->
     <img src="<?php echo base_url(); ?>images/Bagan.original.3730.jpg" id="background">
     <div id="search-container-wrap" class="row">
@@ -114,9 +108,13 @@
             $x="";
             foreach($regions as $region):
                 $x += 1 ;
+                $class = "";
+                if($x > 4){
+                    $class = "hide_class";
+                }
         ?>
 
-        <div class="col-sm-6" id="body-info-parts">
+        <div class="col-sm-6 <?php echo $class; ?>" id="body-info-parts">
             <div class="col-sm-12" id="body-info-head">
                 <h4><?php echo $region->region_name_en." ".$region->region_type; ?></h4>
             </div>
@@ -128,10 +126,13 @@
 
                             //print select_by_id();
 
-                            $quy='SELECT * FROM city where ct_region_id='. $region->region_id;
+                            $quy = 'SELECT * FROM city WHERE ct_region_id='. $region->region_id;
+                            $quy .= ' LIMIT 0,5';
                             $query = $this->db->query($quy);
-
-                            foreach ($query->result_array() as $row){
+                            $r = "";
+                            foreach ($query->result_array() as $row){  
+                                $r += 1; 
+                                if($r < 6){
                         ?>
                         <li class="animation">
                             <a href="<?php echo base_url(); ?>hotels-in-<?php echo slug_url($row['ct_name_en']); ?>">
@@ -139,6 +140,16 @@
                             </a>
                         </li>
                         <?php
+                            }
+                            else{
+                        ?>
+                        <li class="animation">
+                            <a href="<?php echo base_url(); ?>hotels-in-<?php echo slug_url($row['ct_name_en']); ?>">
+                                more city <span class="fa fa-arrow"></span>
+                            </a>
+                        </li>
+                        <?php
+                            }
                            }
                         ?>
                     </ul>
@@ -200,7 +211,8 @@
     
         <?php endforeach; ?>
         <div class="row">
-          <button type="button" class="btn btn-info see">See More</button>
+          <button type="button" class="btn btn-primary see pull-right">See More</button>
+          <button type="button" class="btn btn-primary less pull-right">Less</button>
         </div>
         </div>
 
@@ -241,7 +253,14 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $('.see').click(function(){
-            $('#seemore').slideDown();
+            $('.hide_class').slideDown();
+            $('.less').show();
+            $('.see').hide();
+        });
+        $('.less').click(function(){
+            $('.hide_class').slideUp();
+            $('.less').hide();
+            $('.see').show();
         });
     });
     </script>
