@@ -33,6 +33,11 @@
                 <h4> PROPERTY TYPE</h4>
               </div>
               <div class="col-md-12" id="left_menu">
+                <form class="form" action="" method="POST">
+                  
+                  <input type="checkbox" name=""/><span>5 Star</span>
+
+                </form>
                 <ul>
                   <li><span class="glyphicon glyphicon-star"></span>5 Star<span class="pull-right">(235)</span></li>
                   <li><span class="glyphicon glyphicon-star"></span>4 Star<span class="pull-right">(235)</span></li>

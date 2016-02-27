@@ -73,7 +73,7 @@
                 <li><a href="navbar-static-top/">Hotel</a></li>
                 <li><a href="<?php echo base_url(); ?>place.htm">Place</a></li>
                 <li><a href="<?php echo base_url(); ?>guide.htm">Guide</a></li>
-                <li><a href="navbar-fixed-top/">Login</a></li>
+                <li><a href="<?php echo base_url(); ?>login.htm">Login</a></li>
                 <li><a href="<?php echo base_url(); ?>register.htm">Register</a></li>
               </ul>
             </div><!--/.nav-collapse -->
