@@ -35,28 +35,35 @@
               <div class="col-md-12" id="left_menu">
                 <form class="form" action="" method="POST">
                   
-                  <input type="checkbox" name=""/><span>5 Star</span>
+                  <input type="checkbox" name=""/><span>5 Star</span><span class="pull-right">(235)</span><br/>
+
+                  <input type="checkbox" name=""/><span>4 Star</span><br/>
+
+                  <input type="checkbox" name=""/><span>3 Star</span><br/>
+
+                  <input type="checkbox" name=""/><span>2 Star</span><br/>
+
+                  <input type="checkbox" name=""/><span>2 Star</span><br/>
 
                 </form>
-                <ul>
-                  <li><span class="glyphicon glyphicon-star"></span>5 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>4 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>3 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>2 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>1 Star<span class="pull-right">(235)</span></li>
-                </ul>
               </div>
               <div class="col-md-12" id="left_menu_header">
                 <h4> FACILITIES</h4>
               </div>
               <div class="col-md-12" id="left_menu">
-                <ul>
-                  <li><span class="glyphicon glyphicon-star"></span>5 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>4 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>3 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>2 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>1 Star<span class="pull-right">(235)</span></li>
-                </ul>
+                <form class="form" action="" method="POST">
+                  
+                  <input type="checkbox" name=""/><span>Bar</span><span class="pull-right">(235)</span><br/>
+
+                  <input type="checkbox" name=""/><span>Wifi</span><br/>
+
+                  <input type="checkbox" name=""/><span>Restrant</span><br/>
+
+                  <input type="checkbox" name=""/><span>Breakfast</span><br/>
+
+                  <input type="checkbox" name=""/><span>Parcking</span><br/>
+
+                </form>
               </div>
             </div>
     <!-- /end left menu section -->

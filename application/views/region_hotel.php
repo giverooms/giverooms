@@ -1,5 +1,5 @@
 <?php
-  $slug = trim(str_replace('hotels-in-', '', $this->uri->segment(1)));
+  $slug = trim(str_replace('-region', '', $this->uri->segment(1)));
   
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/hotel.css">
@@ -8,50 +8,50 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
               <div class="col-md-12" id="left_menu_header">
-                <h4>PLACE AROUND <?php echo strtoupper($slug); ?> (MYANMAR)</h4>
+                <h4>PLACE AROUND  (MYANMAR)</h4>
               </div>
+
+              <div class="col-md-12" id="left_menu">
+                <ul>
+                  <?php foreach($regioncity as $cities): ?>
+                    <li><a href="<?php echo base_url(); ?>hotels-in-<?php echo $cities->ct_name_en; ?>">
+                      <span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;
+                      <?php print $cities->ct_name_en; ?>
+                      <span class="pull-right" style="color: #f88e00;"><?php echo get_total_hotel($cities->ct_id); ?>&nbsp;hotels</span></a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+
               <div class="col-md-12" id="left_menu">
                 <ul>
                   <?php
-                    foreach($hotel_info as $info):
+                    foreach($regionhotel as $regionhotels):
+                      $id = 1;
                   ?>
+                  <a href="hotels-in-<?php echo get_city_name($id); ?>">
                   <li>
-                  <span class="glyphicon glyphicon-hand-right"></span>
-                  <?php print $info->hotel_name; ?>
-                  </li>
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                    <?php print $regionhotels->hotel_name; ?>
+                  </li></a>
                   <?php
                     endforeach;
                   ?>
                 </ul>
               </div>
-              <div class="col-md-12" id="left_menu">
-                <ul>
-                  
-                </ul>
-              </div>
+              
               <div class="col-md-12" id="left_menu_header">
                 <h4> PROPERTY TYPE</h4>
               </div>
               <div class="col-md-12" id="left_menu">
-                <ul>
-                  <li><span class="glyphicon glyphicon-star"></span>5 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>4 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>3 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>2 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>1 Star<span class="pull-right">(235)</span></li>
-                </ul>
+               
+                 
               </div>
               <div class="col-md-12" id="left_menu_header">
                 <h4> FACILITIES</h4>
               </div>
               <div class="col-md-12" id="left_menu">
-                <ul>
-                  <li><span class="glyphicon glyphicon-star"></span>5 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>4 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>3 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>2 Star<span class="pull-right">(235)</span></li>
-                  <li><span class="glyphicon glyphicon-star"></span>1 Star<span class="pull-right">(235)</span></li>
-                </ul>
+               
               </div>
             </div>
     <!-- /end left menu section -->
@@ -105,18 +105,18 @@
             <!-- start content show -->
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="right_content_show">
                 <?php
-                  foreach($hotel_info as $info):
-                    $slug1 = strtolower(str_replace(" ", "-", trim($info->hotel_name)));
+                  foreach($regionhotel as $hotelinfo):
+                    $slug1 = strtolower(str_replace(" ", "-", trim($hotelinfo->hotel_name)));
                 ?>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="one_item">
                     <a href="<?php echo base_url();?>hotels-in-<?php echo $slug; ?>/<?php echo $slug1;?>">
-                    <img src="<?php print base_url().$info->hotel_image; ?>" class="img-responsive center-block">
+                    <img src="<?php print base_url().$hotelinfo->hotel_image; ?>" class="img-responsive center-block">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="text">
-                      <small><?php print $info->hotel_type; ?></small>
-                      <h4><?php print $info->hotel_name; ?></h4>
+                      <small><?php print $hotelinfo->hotel_type; ?></small>
+                      <h4><?php print $hotelinfo->hotel_name; ?></h4>
                       <p>
-                       Towering above the city centre competition, this new hotel has super smart rooms at an affordable price. Standard rooms are small but include many of the features found in the higher class rooms...
+                       <?php print $hotelinfo->hotel_desc; ?>
                       </p>
                     </div>
                     </a>

@@ -7,18 +7,18 @@ class Region extends CI_Controller {
 
         parent::__construct();
         $this->load->database();                // load database
-        $this->load->model('Homemodel');        // load model
+        $this->load->model(array('Homemodel','Hotelmodel'));        // load model
 
     }
 
-    function index()
+    public function index()
     {
         $this->load->view('templates/header');
         $this->load->view('hotel');
         $this->load->view('templates/footer');  
     }
 
-    function hotel($city)
+    public function hotel($city)
     {
 
         $data = $this->get_hotel($city);
@@ -29,7 +29,7 @@ class Region extends CI_Controller {
 
     }
 
-    function get_hotel($ct_name){
+    public function get_hotel($ct_name){
         
         $ct_name = trim(str_replace('hotels-in-', '', $this->uri->segment(1)));
         $data['hotel_info'] = $this->Homemodel->getHotel($ct_name);
@@ -37,7 +37,16 @@ class Region extends CI_Controller {
         return $data;
     }
 
-    function getCityInRegion($Region){
-        
+    public function regionHotel(){
+
+        $ct_name = htmlspecialchars(trim(str_replace(array('hotels-in','-region'), '', $this->uri->segment(1))));
+        $data['regionhotel'] = $this->Hotelmodel->getHotelRegion($ct_name);
+        $data['regioncity'] = $this->Hotelmodel->getCityRegion($ct_name);
+
+        $this->load->view('templates/header');
+        $this->load->view('region_hotel',$data);
+        $this->load->view('templates/footer');
+
     }
+
 }

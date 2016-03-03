@@ -127,12 +127,12 @@
                             //print select_by_id();
 
                             $quy = 'SELECT * FROM city WHERE ct_region_id='. $region->region_id;
-                            $quy .= ' LIMIT 0,5';
+                            $quy .= ' LIMIT 0,2';
                             $query = $this->db->query($quy);
                             $r = "";
                             foreach ($query->result_array() as $row){  
                                 $r += 1; 
-                                if($r < 6){
+                                if($r < 2){
                         ?>
                         <li class="animation">
                             <a href="<?php echo base_url(); ?>hotels-in-<?php echo slug_url($row['ct_name_en']); ?>">
@@ -144,7 +144,7 @@
                             else{
                         ?>
                         <li class="animation">
-                            <a href="<?php echo base_url(); ?>hotels-in-<?php echo slug_url($row['ct_name_en']); ?>">
+                            <a href="<?php echo base_url(); ?><?php echo slug_url($region->region_name_en); ?>-region/hotels">
                                 more city <span class="fa fa-arrow"></span>
                             </a>
                         </li>

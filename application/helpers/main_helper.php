@@ -46,3 +46,29 @@ if(!function_exists('select_by_id')){
    }
 }
 
+if(!function_exists('get_total_hotel')){
+    function get_total_hotel($id){
+        $CI =& get_instance();
+        $CI->load->database();
+
+        $sql = "select * from hotel where hotel_ct_id = ".$id;
+        $quy = $CI->db->query($sql);
+        $row = $quy->result();
+
+        return $quy->num_rows();
+    }
+}
+
+if(!function_exists('get_city_name')){
+    function get_city_name($id){
+        $CI = & get_instance();
+        $CI->load->database();
+
+        $sql = "select ct_name_en from city where ct_id = ".$id;
+        $c_quy = $CI->db->query($sql);
+        $c_row = $c_quy->result();
+
+        return $c_row;
+    }
+}
+
