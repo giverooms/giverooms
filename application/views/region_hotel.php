@@ -29,7 +29,7 @@
                     foreach($regionhotel as $regionhotels):
                       $id = 1;
                   ?>
-                  <a href="hotels-in-<?php echo get_city_name($id); ?>">
+                  <a href="hotels-in-<?php ?>">
                   <li>
                     <span class="glyphicon glyphicon-hand-right"></span>
                     <?php print $regionhotels->hotel_name; ?>

@@ -144,7 +144,7 @@
                             else{
                         ?>
                         <li class="animation">
-                            <a href="<?php echo base_url(); ?><?php echo slug_url($region->region_name_en); ?>-region/hotelswww">
+                            <a href="<?php echo base_url(); ?><?php echo slug_url($region->region_name_en); ?>-region/hotels">
                                 more city <span class="fa fa-arrow"></span>
                             </a>
                         </li>
