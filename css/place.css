@@ -1,0 +1,40 @@
+#page_content{
+	background: white!important;
+}
+#content{
+	background: white;
+	border: 1px solid #f7f7f7;
+	box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.1);
+	min-height: 500px;
+	padding:0px;
+}
+#left_menu{
+	
+}
+#left_menu ul{
+	margin:0px;
+	padding:0px;
+}
+#left_menu ul > li{
+	list-style: none;
+	color: #333;
+	border-bottom: 1px solid #f7f7f7;
+	min-height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+}
+#right_content{
+	
+}
+#right_content #header{
+	border-bottom: 1px solid silver;
+}
+#place_item img{
+	width: 180px;
+	height: initial;
+	border-radius: 5px;
+}
+#place_item p{
+	text-align: justify;
+	text-indent: 30px;
+}

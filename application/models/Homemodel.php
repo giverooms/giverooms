@@ -71,6 +71,16 @@
 
 			return $hdetail_query->result();
 		}
+
+		function get_place_detail(){
+
+			$this->db->select('*');
+			$this->db->from('place');
+			$query = $this->db->get();
+
+			return $query->result();
+
+		}
 	 
 	}
 ?>

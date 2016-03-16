@@ -59,3 +59,4 @@ $route['hotels-in-(:any)/(:any)'] = 'hotel/detail/$1';
 $route['hotels-in-(:any)/(:any)/(:any)'] = 'room/detail/$1';
 $route['(:any)-region/hotels'] = 'region/regionhotel';
 $route['login.htm'] = 'register/login';
+$route['place.html'] = 'place/index';

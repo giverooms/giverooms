@@ -43,6 +43,7 @@
               }
           });
         });
+
       </script>
       <script type="text/javascript" src="<?php echo base_url(); ?>js/slide_region_state.js"></script>
 </head>
@@ -51,7 +52,8 @@
 <!--************* Head **********************-->
   <header class="row">
     <div class="col-md-2">
-      <img src="<?php echo base_url(); ?>images/giverooms.jpg" width="150px" height="60px">
+      <!-- <img src="<?php echo base_url(); ?>images/giverooms.jpg" width="150px" height="60px"> -->
+      <b>GiveRooms</b>
     </div>
 
 <!--************* NAV **********************-->
@@ -70,14 +72,23 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
                 <li class=""><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li><a href="navbar-static-top/">Hotel</a></li>
-                <li><a href="<?php echo base_url(); ?>place.htm">Place</a></li>
+                <li id="hotel"><a href="navbar-static-top/">Hotel</a></li>
+                <li><a href="<?php echo base_url(); ?>place.html">Place</a></li>
                 <li><a href="<?php echo base_url(); ?>guide.htm">Guide</a></li>
                 <li><a href="<?php echo base_url(); ?>login.htm">Login</a></li>
                 <li><a href="<?php echo base_url(); ?>register.htm">Register</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
-       </nav>
+        </nav>
+    </div>
+    <div class="container" id="hover_menu">
+      <div class="col-md-12">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </div>
     </div>
   </header>
