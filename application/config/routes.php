@@ -54,9 +54,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['hotels-in-(:any)'] = 'region/hotel/$1';
-$route['register.htm'] = 'register';
+$route['register.html'] = 'register';
 $route['hotels-in-(:any)/(:any)'] = 'hotel/detail/$1';
 $route['hotels-in-(:any)/(:any)/(:any)'] = 'room/detail/$1';
 $route['(:any)-region/hotels'] = 'region/regionhotel';
-$route['login.htm'] = 'register/login';
+$route['login.html'] = 'register/login';
 $route['place.html'] = 'place/index';
+$route['guide.html'] = 'guide/index';

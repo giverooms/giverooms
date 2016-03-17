@@ -13,11 +13,9 @@ class Guide extends CI_Controller {
 
 	function index()
 	{
-		$data['regions'] = $this->Homemodel->get_region_data();
-		$data['top_hotels'] = $this->Homemodel->getTopHotel();
 
 		$this->load->view('templates/header');
-		$this->load->view('home',$data);
+		$this->load->view('guide');
 		$this->load->view('templates/footer');																																												
 	}
 
