@@ -6,8 +6,8 @@ class Register extends CI_Controller {
 	function __construct() {
         parent::__construct();
     
-       $this->load->helper('url');             // Load url helper
-       $this->load->library('form_validation');
+       $this->load->helper('url','email');             // Load url helper
+       $this->load->library('form_validation','session');
        $this->load->model('Registermodel');
     }
 
@@ -21,21 +21,38 @@ class Register extends CI_Controller {
 
   public function add_user(){
     $rules = array(
-    array('field'=>'username','label'=>'User Name','rules'=>'trim|required|min_length[4]|max_length[12]'),
-    array('field'=>'email','label'=>'Email','rules'=>'trim|required|valid_email'),
-    array('field'=>'password','label'=>'Password','rules'=>'trim|required|min_length[6]'),
-    array('field'=>'gender','label'=>'Gender','rules'=>'required')
+      array('field'=>'name', 'label'=>'Name', 'rules'=>'trim|required'),
+      array('field'=>'email', 'label'=>'Email', 'rules'=>'trim|required|valid_email'),
+      array('field'=>'email', 'label'=>'Phone', 'rules'=>'trim|required'),
+      array('field'=>'password','label'=>'Password', 'rules'=>'required')
+     // array('field'=>'repassword', 'label'=>'Confirm Password', 'rules'=>'required')
     );
 
     $this->form_validation->set_rules($rules);
     if($this->form_validation->run() == FALSE)
     {
-      $this->load->view('register_view');
+      redirect(site_url('register.html'));
     }
     else
     {
-      $this->user_model->register_user();
-      $this->load->view('success');
+      $email = $this->input->post('email');
+      $name = $this->input->post('name');
+
+      if($this->Registermodel->add_user() == true){
+
+        $sub = "GiveRooms Verification Mail";
+        $msg = "<html><p>Dear ".$name.",</p><p>Thank you for registration on GiveRooms.com,<br/>You need to activate by clicking link below.</p><p>Active Link:<br/><a href='http://www.giverooms.com/register.php?passkey='>http://www.giverooms.com/register.php?passkey=</a></p></html>";
+
+        $this->session->set_flashdata('register', array('messages' => 'Your register successfully !We send verification link to you email.See in your email','class' => 'alert-success')); 
+
+        send_email('',$email,'',$sub,$msg);
+        
+        redirect(site_url('register.html'));
+      }
+      else{
+        redirect(site_url('login.html'));
+      }
+
     }
   }
 
