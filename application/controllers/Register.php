@@ -19,54 +19,24 @@ class Register extends CI_Controller {
 		$this->load->view('templates/footer');																		
 	}
 
-	public function login(){
-		$this->load->view('templates/header');
-		$this->load->view('login');
-		$this->load->view('templates/footer');
+  public function add_user(){
+    $rules = array(
+    array('field'=>'username','label'=>'User Name','rules'=>'trim|required|min_length[4]|max_length[12]'),
+    array('field'=>'email','label'=>'Email','rules'=>'trim|required|valid_email'),
+    array('field'=>'password','label'=>'Password','rules'=>'trim|required|min_length[6]'),
+    array('field'=>'gender','label'=>'Gender','rules'=>'required')
+    );
 
-		$this->load->library('form_validation');
- 
-   		$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-   		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
- 
-   		if($this->form_validation->run() == FALSE)
-   		{
-     		//Field validation failed.  User redirected to login page
-     		$this->load->view('login_view');
-   		}
-   		else
-   		{
-     		//Go to private area
-     		redirect('home', 'refresh');
-   		}	
-	}
+    $this->form_validation->set_rules($rules);
+    if($this->form_validation->run() == FALSE)
+    {
+      $this->load->view('register_view');
+    }
+    else
+    {
+      $this->user_model->register_user();
+      $this->load->view('success');
+    }
+  }
 
-	public function check_database($password)
- 	{
-   		//Field validation succeeded.  Validate against database
-   		$username = $this->input->post('username');
- 
-   		//query the database
-   		$result = $this->Registermodel->login($username, $password);
- 
-   		if($result)
-   		{
-     		$sess_array = array();
-     		foreach($result as $row)
-     		{
-       			$sess_array = array(
-         			'id' => $row->id,
-         			'username' => $row->username
-       			);
-       		$this->session->set_userdata('logged_in', $sess_array);
-     		}
-
-     		return TRUE;
-   		}
-   		else
-   		{
-     		$this->form_validation->set_message('check_database', 'Invalid username or password');
-     		return false;
-   		}
- 	}
 }

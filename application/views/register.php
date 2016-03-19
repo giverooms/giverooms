@@ -4,7 +4,8 @@
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3  col-md-offset-3 col-lg-offset-3" id="register_box">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3>Register in GiveRooms</h3>
-				<form class="form" action="<?php echo site_url('register/addUser');?>" method="POST">
+
+				<form class="form" action="<?php echo site_url('register/add_user');?>" method="POST">
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
