@@ -4,11 +4,101 @@
         <div class="col-sm-1"></div>
         <div id="search-container" class="col-xs-12 col-sm-10 col-md-10 col-lg-10" >
             <div class="row">
-                <div id="video-holder" class="col-sm-6">
-                    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0px;">
+
+    <!-- start search section slider code -->
+ 
+
+    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
+    <script type="text/javascript" src="js/search_slider.js"></script>
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 328px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 328px; overflow: hidden;">
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/ngapali.jpg" />
+                <div data-u="caption" data-t="0" style="position: absolute; top: 320px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">mobile ready, touch swipe</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/aa.jpg" />
+                <div data-u="caption" data-t="1" data-3d="1" style="position: absolute; top: -50px; left: 125px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Equality and Equity</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/003.jpg" />
+                <div data-u="caption" data-t="2" style="position: absolute; top: 30px; left: -380px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">finger catchable right to left</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/004.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">responsive, scale smoothly</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/005.jpg" />
+                <div data-u="caption" data-t="4" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.6); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">image, text, and custom layers</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/006.jpg" />
+                <div data-u="caption" data-t="5" style="position: absolute; top: 30px; left: 600px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">tons of transition type</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/009.jpg" />
+                <div data-u="caption" data-t="6" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">visual slider maker</div>
+            </div>
+            <div data-b="0" data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/008.jpg" />
+                <div data-u="caption" data-t="7" style="position: absolute; top: -50px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">play in and play out</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/011.jpg" />
+                <div data-u="caption" data-t="8" data-3d="1" style="position: absolute; top: 25px; left: 150px; width: 250px; height: 250px; background-color: rgba(40,177,255,0.6); overflow: hidden;">
+                    <div data-u="caption" data-t="9" style="position: absolute; top: 100px; left: 25px; width: 200px; height: 50px; font-size: 24px; line-height: 50px;">A Child Layer</div>
+                </div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/010.jpg" />
+                <div data-u="caption" data-t="10" data-3d="1" style="position: absolute; top: 25px; left: 100px; width: 250px; height: 250px; background-color: rgba(40,177,255,0.6);">
+                    <div style="margin: 15px; font-size: 20px;">
+                        <p>This is full customized content layer.<br />
+                        </p>
+                        <p>
+                            Everything is allowed
+                            
+                        </p>
+                        You can put
+                        
+                        <a href="http://wwww.jssor.com">
+                            a link
+                        </a> or an image
+                        
+                        <img src="img/icon_chrome.png" /> here.
+                        
+                    </div>
+                </div>
+            </div>
+            <a data-u="ad" href="http://www.jssor.com" style="display:none">Responsive Slider</a>
+        
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    </div>
+    <script>
+        jssor_1_slider_init();
+    </script>
+
+   
+
+<!-- /end search section slider code -->
                 </div>
 
-                <div id="search-box" class="col-xs-12 col-sm-6">
+                <div id="search-box" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <h3>Find The Best Hotel Rooms Here</h3>

@@ -11,6 +11,7 @@
       <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/index.css">
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.flexisel.js"></script>
+      <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.slider.min.js"></script>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/slide_item.css">
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.core.js"></script>
       <script type="text/javascript" src="<?php echo base_url(); ?>js/jssor.utils.js"></script>
@@ -48,12 +49,47 @@
       <script type="text/javascript" src="<?php echo base_url(); ?>js/slide_region_state.js"></script>
 </head>
 <body>
+<!-- popup modal for login -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true" style="background: rgba(44, 62, 80,0.7);">
+      <div class="modal-dialog modal-lg" style="width: 30%;">
+        <div class="modal-content">
+          <div class="modal-header" style="background: #112e5e;color: white;">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Login in GiveRooms</h4>
+          </div>
+          <div class="modal-body">
+              <form class="form" action="<?php echo site_url('register/add_user');?>" method="POST">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label for="email">Email :</label>
+                    <input type="email" name="username" placeholder="username or email" class="form-control" required>
+                  </div>
+                </div><br/>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="password" class="form-control password" required>
+                  </div>
+                </div><br/>
+
+               <input type="submit" class="form-control btn btn-info" value="Sing In for GiveRooms"/>
+              </form><br/>
+
+              <p>Forget your password ?<a href="">Click Here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- /end login -->
+
 <div class="container-fluid">
 <!--************* Head **********************-->
   <header class="row">
+
     <div class="col-md-2">
       <!-- <img src="<?php echo base_url(); ?>images/giverooms.jpg" width="150px" height="60px"> -->
-      <b>GiveRooms</b>
+      <b>GiveRooms.com</b>
     </div>
 
 <!--************* NAV **********************-->
@@ -75,7 +111,7 @@
                 <li id="hotel"><a href="navbar-static-top/">Hotel</a></li>
                 <li><a href="<?php echo base_url(); ?>place.html">Place</a></li>
                 <li><a href="<?php echo base_url(); ?>guide.html">Guide</a></li>
-                <li><a href="<?php echo base_url(); ?>login.html">Login</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
                 <li><a href="<?php echo base_url(); ?>register.html">Register</a></li>
               </ul>
             </div><!--/.nav-collapse -->

@@ -23,7 +23,7 @@
 				<?php
 					endif;
 				?>
-				<form class="form" action="<?php echo site_url('register/add_user');?>" method="POST">
+				<form class="form" action="<?php echo site_url('register/login');?>" method="POST">
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -23,7 +23,7 @@ class Register extends CI_Controller {
     $rules = array(
       array('field'=>'name', 'label'=>'Name', 'rules'=>'trim|required'),
       array('field'=>'email', 'label'=>'Email', 'rules'=>'trim|required|valid_email'),
-      array('field'=>'email', 'label'=>'Phone', 'rules'=>'trim|required'),
+      array('field'=>'phone', 'label'=>'Phone', 'rules'=>'trim|required'),
       array('field'=>'password','label'=>'Password', 'rules'=>'required')
      // array('field'=>'repassword', 'label'=>'Confirm Password', 'rules'=>'required')
     );
@@ -50,8 +50,29 @@ class Register extends CI_Controller {
         redirect(site_url('register.html'));
       }
       else{
-        redirect(site_url('login.html'));
+        //redirect(site_url('login.html'));
       }
+
+    }
+  }
+
+  function login(){
+    $rules = array(
+      array('field'=>'email', 'label'=>'Email', 'rules'=>'trim|required|valid_email'),
+      array('field'=>'password','label'=>'Password', 'rules'=>'required')
+    );
+
+    $this->form_validation->set_rules($rules);
+    if($this->form_validation->run() == FALSE)
+    {
+      redirect(site_url('home/index'));
+    }
+    else{
+
+      if($this->Registermodel->login() == true){
+        redirect(site_url('place.html'));
+      }
+     
 
     }
   }

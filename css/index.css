@@ -17,11 +17,12 @@ body{
 }
 header{
 	height: 60px;
-	background-color: rgba(0, 0, 0, 0.3);
+	/*background-color: rgba(0, 0, 0, 0.3);
 	/*background-color: rgba(229, 103, 23, 0.8);*/
 	opacity: 1;
-	box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;
+	/*box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;*/
 	color: black;
+	border-bottom: 1px solid #f88e00;
 }
 @font-face {
 	font-family:'MotionPicture_PersonalUseOnly';
@@ -35,6 +36,7 @@ header b{
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
   	font-style: italic;
+  	text-shadow: 0px 1px 1px #444;
 }
 #header_text{
 	font-size: 36px;
@@ -45,13 +47,11 @@ nav	{
 	/*color: #e67e22;*/
 	/*box-shadow: rgba(0,0,0,0.1) 0px 5px 10px 0px;*/
 	margin: 0;
-	color: white;
 	text-shadow: 0px 1px 1px 3px rgba(255, 255, 255, 0.9);
 }
 nav a{
-	color: white;
-	text-shadow: 0px 1px 1px 3px rgba(255, 255, 255, 0.9);
-	font-weight: bold;
+	color: #f88e00;
+	text-shadow: 0px 1px 1px #444;
 }
 
 /*#search-container-wrap img{
@@ -60,7 +60,7 @@ nav a{
 	z-index:-100;
 }*/
 #search-container-wrap{
-	padding: 60px 0 110px 0;
+	padding: 30px 0 90px 0;
 	background: url("images/3.jpg") no-repeat;
 }
 #search-container{
@@ -77,7 +77,9 @@ nav a{
 	padding: 20px 0 0 0;
 }
 #search-box p, #search-box h3{
-	margin: 10px 0 25px 0;
+	margin: 5px 0 25px 0;
+	color: #f88e00;
+	text-shadow: 0px 1px 1px #444;
 }
 .input-group{
 	margin: 10px 0 25px 0;
@@ -93,6 +95,62 @@ nav a{
 	font-weight: bold;
 
 }
+
+/* search section slider */
+ 
+/* jssor slider bullet navigator skin 01 css */
+/*
+.jssorb01 div           (normal)
+.jssorb01 div:hover     (normal mouseover)
+.jssorb01 .av           (active)
+.jssorb01 .av:hover     (active mouseover)
+.jssorb01 .dn           (mousedown)
+*/
+.jssorb01 {
+    position: absolute;
+}
+.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 12px;
+    height: 12px;
+    filter: alpha(opacity=70);
+    opacity: .7;
+    overflow: hidden;
+    cursor: pointer;
+    border: #000 1px solid;
+}
+.jssorb01 div { background-color: gray; }
+.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+.jssorb01 .av { background-color: #fff; }
+.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+/* jssor slider arrow navigator skin 02 css */
+/*
+.jssora02l                  (normal)
+.jssora02r                  (normal)
+.jssora02l:hover            (normal mouseover)
+.jssora02r:hover            (normal mouseover)
+.jssora02l.jssora02ldn      (mousedown)
+.jssora02r.jssora02rdn      (mousedown)
+*/
+.jssora02l, .jssora02r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url('../img/a02.png') no-repeat;
+    overflow: hidden;
+}
+.jssora02l { background-position: -3px -33px; }
+.jssora02r { background-position: -63px -33px; }
+.jssora02l:hover { background-position: -123px -33px; }
+.jssora02r:hover { background-position: -183px -33px; }
+.jssora02l.jssora02ldn { background-position: -3px -33px; }
+.jssora02r.jssora02rdn { background-position: -63px -33px; }
+/* end search section slider */
 
 #search-container #search-by-region a{
 	color: white;

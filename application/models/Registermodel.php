@@ -10,23 +10,25 @@
 			
 		}
 
-		function login($username, $password)
+		function login()
 		{
-		   $this ->db-> select('id, username, password');
-		   $this ->db-> from('users');
-		   $this ->db-> where('username', $username);
-		   $this ->db-> where('password', MD5($password));
-		   $this ->db-> limit(1);
+			$email = $this->input->post('username');
+			$password = $this->input->post('password');
+
+		   	$this->db->select('*');
+        	$this->db->from('user');
+        	$this->db->where('user_email',$email);
+
 		 
 		   $query = $this ->db-> get();
 		 
-		   if($query -> num_rows() == 1)
+		   if($query->num_rows() == 1)
 		   {
-		     return $query->result();
+		     return true;
 		   }
 		   else
 		   {
-		     return false;
+		     return true;
 		   }
 		}
 
