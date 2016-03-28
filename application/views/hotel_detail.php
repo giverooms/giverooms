@@ -57,15 +57,17 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_inner">
             <div class="row header">Hotel Sevices</div>
             <table class="table">
-                <tr>
-                    <td><span class="fa fa-cutlery"></span>&nbsp;Restaurant</td>
-                </tr>
-                <tr>
-                    <td><span class="fa fa-beer"></span>&nbsp;Bar</td>
-                </tr>
-                <tr>
-                    <td><span class="fa fa-life-ring"></span>&nbsp;Air Conditioning</td>
-                </tr>
+                <?php  
+                    $row = get_facilities();
+
+                    foreach($row as $facilities):
+                ?>
+                    <tr>
+                        <td><span class="fa fa-<?php echo $facilities->facilities_class; ?>"></span>&nbsp;<?php echo $facilities->facilities_name; ?></td>
+                    </tr>
+                <?php
+                    endforeach;
+                ?>
                 <tr>
                     <td><small style="color: gray;">Click <a >Service and Facilities</a> for more information <span class="fa fa-hand-o-right"></span></small></td>
                 </tr>

@@ -50,18 +50,25 @@
               <div class="col-md-12" id="left_menu_header">
                 <h4> FACILITIES</h4>
               </div>
-              <div class="col-md-12" id="left_menu">
+              <div class="col-md-12 facilities" id="left_menu">
                 <form class="form" action="" method="POST">
                   
-                  <input type="checkbox" name=""/><span>Bar</span><span class="pull-right">(235)</span><br/>
+                  <table>
+                     <?php  
+                    $row = get_facilities();
 
-                  <input type="checkbox" name=""/><span>Wifi</span><br/>
-
-                  <input type="checkbox" name=""/><span>Restrant</span><br/>
-
-                  <input type="checkbox" name=""/><span>Breakfast</span><br/>
-
-                  <input type="checkbox" name=""/><span>Parcking</span><br/>
+                    foreach($row as $facilities):
+                ?>
+                    <tr>
+                        <td>
+                          <input type="checkbox" name="">&nbsp; 
+                          <span class="fa fa-<?php echo $facilities->facilities_class; ?>"></span>&nbsp;<?php echo $facilities->facilities_name; ?>
+                        </td>
+                    </tr>
+                <?php
+                    endforeach;
+                ?>
+                  </table>
 
                 </form>
               </div>

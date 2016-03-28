@@ -58,7 +58,7 @@
             <h4 class="modal-title" id="myModalLabel">Login in GiveRooms</h4>
           </div>
           <div class="modal-body">
-              <form class="form" action="<?php echo site_url('register/add_user');?>" method="POST">
+              <form class="form" action="<?php echo site_url('register/login');?>" method="POST">
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <label for="email">Email :</label>
@@ -89,7 +89,7 @@
 
     <div class="col-md-2">
       <!-- <img src="<?php echo base_url(); ?>images/giverooms.jpg" width="150px" height="60px"> -->
-      <b>GiveRooms.com</b>
+      <b>GiveRooms<small style="font-size: 16px;">.com</small></b>
     </div>
 
 <!--************* NAV **********************-->
@@ -117,14 +117,5 @@
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
         </nav>
-    </div>
-    <div class="container" id="hover_menu">
-      <div class="col-md-12">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-      </div>
     </div>
   </header>

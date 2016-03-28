@@ -3,8 +3,8 @@
   <div class="container" id="content">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" id="left_menu">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="left_menu">
             <h4>Our Tour Itineraries</h4>
             <ul>
               <li>A Classic Tour of Myanmar</li>

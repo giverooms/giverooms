@@ -1,3 +1,11 @@
+<style type="text/css">
+    header{
+        background: none!important;
+        box-shadow: none!important;
+    }
+    nav a{
+        color: #f88e00;    }
+</style>
 <!--************* SEARCH **********************-->
     <img src="<?php echo base_url(); ?>images/Bagan.original.3730.jpg" id="background">
     <div id="search-container-wrap" class="row">
@@ -136,7 +144,7 @@
                                 </div>                                                              
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <input type="submit" value="Search" name="search" class="btn btn-default pull-left" style="width:100%;">
+                                <input type="submit" value="Search" name="search" class="btn btn-primary pull-left" style="width:100%;">
                             </div>
                         </form>
                     

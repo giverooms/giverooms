@@ -58,21 +58,23 @@ class Register extends CI_Controller {
 
   function login(){
     $rules = array(
-      array('field'=>'email', 'label'=>'Email', 'rules'=>'trim|required|valid_email'),
+      array('field'=>'username', 'label'=>'Username', 'rules'=>'trim|required|valid_email'),
       array('field'=>'password','label'=>'Password', 'rules'=>'required')
     );
 
     $this->form_validation->set_rules($rules);
     if($this->form_validation->run() == FALSE)
     {
-      redirect(site_url('home/index'));
+      redirect(site_url('/'));
     }
     else{
 
       if($this->Registermodel->login() == true){
         redirect(site_url('place.html'));
       }
-     
+      else{
+        redirect(site_url('guide.html'));
+      }
 
     }
   }

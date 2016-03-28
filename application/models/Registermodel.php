@@ -24,7 +24,7 @@
 		 
 		   if($query->num_rows() == 1)
 		   {
-		     return true;
+		     return false;
 		   }
 		   else
 		   {
