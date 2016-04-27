@@ -61,3 +61,4 @@ $route['(:any)-region/hotels'] = 'region/regionhotel';
 $route['login.html'] = 'register/login';
 $route['place.html'] = 'place/index';
 $route['guide.html'] = 'guide/index';
+$route['profile/(:any)'] = 'hotel_admin_profile/index';

@@ -1,0 +1,27 @@
+.hotel_admin_content{
+	padding: 0px;
+	margin: 0px;
+}
+#left_panel{
+	border-right: 1px solid silver;
+	min-height: 400px;
+}
+#right_content{
+	min-height: 400px;
+	padding: 0px;
+}
+#left_panel ul{
+	margin: 0px;
+	padding: 0px;
+}
+#left_panel ul li{
+	list-style: none;
+	color: gray;
+	font-weight: 12px;
+	line-height: 30px;
+	height: 30px;
+}
+#tab_panel{
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 5px;
+}

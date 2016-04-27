@@ -70,10 +70,10 @@ class Register extends CI_Controller {
     else{
 
       if($this->Registermodel->login() == true){
-        redirect(site_url('place.html'));
+        redirect(site_url('profile/mgm-hotel'));
       }
       else{
-        redirect(site_url('guide.html'));
+        redirect(site_url('/'));
       }
 
     }

@@ -6,8 +6,20 @@
 	        $this->load->helper('url');
 	    }
 	 
-		function username_exits($name){
-			
+		function username_exits($user){
+
+			$this->db->select('user_email');
+			$this->db->from('user');
+			$this->db->where('user_email',$user);
+
+			$query = $this->db->get();
+
+			if($query->num_rows > 0){
+				return true;
+			}
+			else{
+				return false;
+			}
 		}
 
 		function login()
@@ -20,15 +32,15 @@
         	$this->db->where('user_email',$email);
 
 		 
-		   $query = $this ->db-> get();
+		   $query = $this->db->get();
 		 
-		   if($query->num_rows() == 1)
+		   if($query->num_rows() > 0)
 		   {
-		     return false;
+		     return true;
 		   }
 		   else
 		   {
-		     return true;
+		     return false;
 		   }
 		}
 
@@ -39,12 +51,6 @@
 			$phone = $this->input->post('phone');
 			$password = $this->input->post('password');
 
-			$this->db->select('user_email');
-			$this->db->from('user');
-			$this->db->where('user_email',$email);
-
-			$query = $this->db->get();
-
 			$data = array(
 					'user_name' =>$name,
 					'user_email' => $email,
@@ -53,10 +59,10 @@
 					'status' => 0
 				);
 			
-			if($query->num_rows > 0){
+			if($this->username_exits($email) == false){
 
 				$this->session->set_flashdata('register', array('messages' => 'You are already Register ! Forget your password !','class' => 'alert-warning')); 
-
+				redirect(site_url('register.html'));
 				return false;
 			}
 			else{
