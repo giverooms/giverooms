@@ -4,22 +4,16 @@
 		function __construct(){
 	        parent::__construct();
 	        $this->load->helper('url');
+	        $this->load->database();
 	    }
 	 
-		function username_exits($user){
+		protected function username_exits($email){
 
-			$this->db->select('user_email');
-			$this->db->from('user');
-			$this->db->where('user_email',$user);
+			$sql = "select * from user where user_email = 'phillipkyaw107@gmail.com'";
+        	$quy = $this->db->query($sql);
+        	$row = $quy->result();
 
-			$query = $this->db->get();
-
-			if($query->num_rows > 0){
-				return true;
-			}
-			else{
-				return false;
-			}
+			return $quy->num_rows;
 		}
 
 		function login()
@@ -32,16 +26,14 @@
         	$this->db->where('user_email',$email);
 
 		 
-		   $query = $this->db->get();
-		 
-		   if($query->num_rows() > 0)
-		   {
-		     return true;
-		   }
-		   else
-		   {
-		     return false;
-		   }
+		   	if($query->num_rows() > 0)
+		   	{
+		     	return true;
+		   	}
+		   	else
+		   	{
+		     	return false;
+		   	}
 		}
 
 		function add_user(){
@@ -50,16 +42,18 @@
 			$email = $this->input->post('email');
 			$phone = $this->input->post('phone');
 			$password = $this->input->post('password');
+			$user = $this->input->post('user');
 
 			$data = array(
 					'user_name' =>$name,
 					'user_email' => $email,
 					'user_phone' => $phone,
 					'user_password' => md5($password),
+					'user_type' => $user,
 					'status' => 0
 				);
 			
-			if($this->username_exits($email) == false){
+			if(username_exit($email) > 0){
 
 				$this->session->set_flashdata('register', array('messages' => 'You are already Register ! Forget your password !','class' => 'alert-warning')); 
 				redirect(site_url('register.html'));

@@ -21,4 +21,10 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');																																												
 	}
 
+	function rule(){
+		$this->load->view('templates/header');
+		$this->load->view('rule');
+		$this->load->view('templates/footer');
+	}
+
 }

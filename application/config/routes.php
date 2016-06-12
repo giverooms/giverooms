@@ -55,10 +55,12 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['hotels-in-(:any)'] = 'region/hotel/$1';
 $route['register.html'] = 'register';
+$route['rule.html'] = 'home/rule';
 $route['hotels-in-(:any)/(:any)'] = 'hotel/detail/$1';
 $route['hotels-in-(:any)/(:any)/(:any)'] = 'room/detail/$1';
 $route['(:any)-region/hotels'] = 'region/regionhotel';
 $route['login.html'] = 'register/login';
 $route['place.html'] = 'place/index';
 $route['guide.html'] = 'guide/index';
-$route['profile/(:any)'] = 'hotel_admin_profile/index';
+$route['term-of-use.html'] = 'home/rule';
+$route['profile/(:any)'] = 'HotelDashboard/index';

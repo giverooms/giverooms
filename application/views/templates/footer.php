@@ -43,5 +43,20 @@
 		</p>
 	</div>
 </div>
+<script src="<?php echo base_url(); ?>js/dynamic_tab.js"></script>
+<script>
+    (function() {
+
+        /**
+         * This is the call we have to do to execute
+         * the plugin giving a custom params
+         */
+        $('#booNavigation').booNavigation({
+            slideSpeed: 200
+        });
+
+    })();
+
+</script>
 </body>
 </html>

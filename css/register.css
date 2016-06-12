@@ -1,6 +1,15 @@
 body{
 	background: #f7f7f7;
 }
+h3{
+	color: #555;
+	font-weight: 700;
+}
+.user_choose{
+	padding: 0px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
 #content_rg{
 	background: white;
 }
@@ -11,6 +20,10 @@ body{
 	margin-bottom: 20px;
 	min-height: 200px;
 	background: white;
+}
+#password_strength
+{
+    font-weight: bold;
 }
 #login_box{
 	margin-bottom: 30px;

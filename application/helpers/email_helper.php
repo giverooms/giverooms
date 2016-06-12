@@ -4,7 +4,7 @@ if ( ! function_exists('send_email'))
 {
     function send_email($from = '',$to = '',$name = '',$subject = '',$message = '')
     {
-    	$ci = get_instance();
+    	$ci =& get_instance();
 
     	if($from == ""){
     		$sender = $from;

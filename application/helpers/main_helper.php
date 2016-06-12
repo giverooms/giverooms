@@ -72,3 +72,18 @@ if(!function_exists('get_city_name')){
     }
 }
 
+if(!function_exists('get_region')){
+    function get_region(){
+
+        $CI =& get_instance();
+        $CI->load->database();
+
+        $sql = "select * from region";
+        $region_query = $CI->db->query($sql);
+        $region_row = $region_query->result();
+
+        return $region_row;
+
+    }
+}
+
